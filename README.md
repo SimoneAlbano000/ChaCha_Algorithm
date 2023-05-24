@@ -6,8 +6,10 @@ The 20-round Stream Cipher ChaCha20 is consistently faster (in software) than th
 ### Library usage
 ```c
 chacha chacha; // chacha struct inizialization
-void chacha_encrypt_decrypt(chacha* chacha, uint8_t* key0, uint8_t* nonce, uint32_t counter, uint8_t* message, uint64_t message_length)
-    where:
+void chacha_encrypt_decrypt(chacha* chacha, uint8_t* key0, uint8_t* nonce, uint32_t counter, uint8_t* message, uint64_t message_length);
+```
+```
+where:
     - chacha* chacha is the struct name
     - key0 is the key used to encrypt/decrypt the plain text message
     - nonce is a 96 bit string that shoud be generated at runtime pseudo/randomly and must be used once with the same key
