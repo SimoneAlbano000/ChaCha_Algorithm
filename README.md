@@ -6,11 +6,12 @@ The 20-round Stream Cipher ChaCha20 is consistently faster (in software) than th
 ### Library usage
 ```c
 in the lib header chacha.h
-    // define the number of ChaCha cycles
-    #define chacha_cycles 20
+// define the number of ChaCha cycles
+#define chacha_cycles 20
+
 in the main program    
-    chacha chacha; // chacha struct inizialization
-    void chacha_encrypt_decrypt(chacha* chacha, uint8_t* key0, uint8_t* nonce, uint32_t counter, uint8_t* message, uint64_t message_length);
+chacha chacha; // chacha struct inizialization
+void chacha_encrypt_decrypt(chacha* chacha, uint8_t* key0, uint8_t* nonce, uint32_t counter, uint8_t* message, uint64_t message_length);
 ```
 ```
 where:
