@@ -4,7 +4,7 @@ ChaCha 20/12/8 Stream Cipher implementation for Embedded Devices
 The 20-round Stream Cipher ChaCha20 is consistently faster (in software) than the Advanced Encrtyption Standard algorithm (AES) and is recommended for cryptographic applications where dedicated hardware acceleration is not present (for example a mid-low budget microcontroller). The reduced-round ciphers ChaCha12 and ChaCha8 are among the fastest 256-bit stream ciphers available and can be implemented in enviroments where computational speed is more important then security. 
 
 ### Library usage
-```
+```c
 chacha chacha; // chacha struct inizialization
 void chacha_encrypt_decrypt(chacha* chacha, uint8_t* key0, uint8_t* nonce, uint32_t counter, uint8_t* message, uint64_t message_length)
     where:
