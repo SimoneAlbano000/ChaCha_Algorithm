@@ -15,9 +15,6 @@ Message: "Ladies and Gentlemen of the class of '99: If I could offer you only on
 #include <Arduino.h>
 #include <chacha.h>
 
-// Necessary for removing compiler warning
-void* mempcpy(void*, const void*, size_t);
-
 void setup() {
   Serial.begin(115200);
 
