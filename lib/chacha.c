@@ -5,6 +5,7 @@
 // Private Prototypes
 static void chacha_fill_matrix(chacha*, uint8_t*, uint8_t*, uint32_t);
 static void chacha_compute_round(chacha*, uint8_t);
+static void* mempcpy(void *, const void *, size_t);
 
 static void chacha_fill_matrix(chacha* chacha, uint8_t* key0, uint8_t* nonce, uint32_t counter) {
     /* ChaCha first block structure
@@ -77,4 +78,8 @@ void chacha_encrypt_decrypt(chacha* chacha, uint8_t* key0, uint8_t* nonce, uint3
         message[(message_length-last_block_len)+i] ^= chacha->serialized_key_block[i];
     }
     return;
+}
+
+void* mempcpy(void *dest, const void *src, size_t len) {
+    return memcpy (dest, src, len) + len;
 }
