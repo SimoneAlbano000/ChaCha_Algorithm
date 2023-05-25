@@ -15,7 +15,7 @@ void chacha_encrypt_decrypt(chacha* chacha, uint8_t* key0, uint8_t* nonce, uint3
 ```
 ```
 where:
-    - chacha* chacha is apointer to the struct
+    - chacha* chacha is a pointer to the struct
     - key0 is the key used to encrypt/decrypt the plain text message
     - nonce is a 96 bit string that shoud be generated at runtime pseudo/randomly and must be used once with the same key
     - counter is a 32 bit unsigned integer used for scrolling the blocks (only usefull if chacha is indended to be used as Stream Cipher, otherwise set to 0)
